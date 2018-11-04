@@ -1,6 +1,8 @@
 <?php
 $path = "img/";
 $domain = "https://thiqq.life/";
+$panel = "panel.php";
+
 $str = $_SERVER['QUERY_STRING'];
 function random_color_part(){return str_pad(dechex(mt_rand(0, 255)), 2, '0', STR_PAD_LEFT);}function random_color(){return random_color_part() . random_color_part() . random_color_part();}
 
@@ -19,8 +21,8 @@ else {
     if (endsWith($str, "mp4")) {header("Content-type: video/mp4");}
     echo readfile($path.$str);
 } return; } else {
-    if (file_exists("panel.php")) {
-    header('Location: panel.php');
+    if (file_exists($panel)) {
+    header('Location: ' . $panel);
     } else {
     echo "Unable to attach to panel";
     return;
