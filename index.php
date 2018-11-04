@@ -4,6 +4,8 @@ $domain = "https://thiqq.life/";
 $panel = "panel.php";
 
 $str = $_SERVER['QUERY_STRING'];
+$agent = $_SERVER['HTTP_USER_AGENT'];
+
 function randomINT() {
     return str_pad(dechex(mt_rand(0, 255)), 2, '0', STR_PAD_LEFT);
 }
@@ -18,7 +20,7 @@ function endsWith($t, $s) {
 }
 
 if (!empty($_GET)) {
-if (strpos($_SERVER['HTTP_USER_AGENT'], 'Discordbot') !== false) {
+if (strpos($agent, 'Discordbot') !== false || strpos($agent, 'Twitterbot') !== false) {
 echo '<head><title>' . $str. '</title><meta content="summary_large_image" name="twitter:card"><meta content="' . $str . '" property="og:title"><meta content="#' . randomRGB() . '"name="theme-color"><meta content="' . $domain . $path . $str. '"name="twitter:image:src"></head>';
 }
 else {
