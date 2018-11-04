@@ -9,7 +9,6 @@ function randomINT() {
 }
 function randomRGB(){
     return randomINT() . randomINT() . randomINT();
-    
 }
 
 function endsWith($t, $s) {
