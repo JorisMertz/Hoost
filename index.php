@@ -17,7 +17,8 @@ if (strpos($_SERVER['HTTP_USER_AGENT'], 'Discordbot') !== false) {
 echo '<head><title>' . $str. '</title><meta content="summary_large_image" name="twitter:card"><meta content="' . $str . '" property="og:title"><meta content="#' . random_color() . '"name="theme-color"><meta content="' . $domain . $path . $str. '"name="twitter:image:src"></head>';
 }
 else {
-    if (endsWith($str, "png")) {header("Content-type: image/png");}if (endsWith($str, "gif")) {header("Content-type: image/gif");}
+    if (endsWith($str, "png")) {header("Content-type: image/png");}
+    if (endsWith($str, "gif")) {header("Content-type: image/gif");}
     if (endsWith($str, "mp4")) {header("Content-type: video/mp4");}
     echo readfile($path.$str);
 } return; } else {
