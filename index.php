@@ -18,5 +18,12 @@ else {
     if (endsWith($str, "png")) {header("Content-type: image/png");}if (endsWith($str, "gif")) {header("Content-type: image/gif");}
     if (endsWith($str, "mp4")) {header("Content-type: video/mp4");}
     echo readfile($path.$str);
-} return; }
+} return; } else {
+    if (file_exists("panel.php")) {
+    header('Location: panel.php');
+    } else {
+    echo "Unable to attach to panel";
+    return;
+    }
+}
 ?>
