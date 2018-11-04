@@ -6,3 +6,5 @@ more file support is coming soon
 
 set $path to the RELATIVE path OR
 leave $path empty and put the absolute path in $domain
+
+Please consider crediting me if you use this 
