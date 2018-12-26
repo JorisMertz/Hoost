@@ -1,0 +1,74 @@
+:root {
+    --darkMain: #1A0002;
+    --midDarkMain: #320007;
+    --main: #5B0006;
+    --midLightMain: #84001D;
+    --lightMain: #AB2840;
+}
+
+form {
+    width: 420px;
+    height: 380px;
+    background: var(--midDarkMain);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    position: absolute;
+    text-align: center;
+}
+
+form input:not([type="submit"]) {
+    border-style: none;
+    background: var(--main);
+    padding: 12.5px;
+    width: 60%;
+    margin: 10px 0 10px 0;
+    outline: none;
+    border: 2px solid transparent;
+}
+
+form
+input:active[type="text"],
+input:focus[type="text"],
+input:active[type="password"],
+input:focus[type="password"] {
+    border: 2px solid var(--midLightMain);
+}
+
+form input::placeholder {
+    color: var(--lightMain);
+}
+
+form input[type="text"] {
+    margin-top: 30px;
+}
+
+form .title {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: var(--lightMain);
+    font-size: 50px;
+    margin-top: 20px;
+}
+
+form input[type="submit"] {
+    border-style: none;
+    background: var(--main);
+    padding: 10px;
+    width: 100px;
+    color: var(--lightMain);
+    margin-right: 20%;
+    margin-top: 20px;
+    float: right;
+}
+
+body, html {
+    width: 100%;
+    height: 100%;
+    background: var(--darkMain);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}

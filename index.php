@@ -1,7 +1,7 @@
 <?php
 $path = "img/";
 $domain = "https://thiqq.life/";
-$panel = "panel.php";
+$panel = "panel/";
 
 $str = $_SERVER['QUERY_STRING'];
 $agent = $_SERVER['HTTP_USER_AGENT'];
@@ -25,6 +25,7 @@ echo '<head><title>' . $str. '</title><meta content="summary_large_image" name="
 }
 else {
     if (endsWith($str, "png")) {header("Content-type: image/png");}
+    if (endsWith($str, "jpg") || endsWith($str, '"jpeg')) {header("Content-type: image/jpeg");}
     if (endsWith($str, "gif")) {header("Content-type: image/gif");}
     if (endsWith($str, "mp4")) {header("Content-type: video/mp4");}
     echo readfile($path.$str);
