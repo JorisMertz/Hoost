@@ -5,6 +5,8 @@ Simple file hosting solution.
 
 To-Do
 
-- [ ] Add all file types
+- [x] Add all file types
 - [ ] Support whatsapp embeds
 - [ ] Redesign
+- [ ] Finish admin panel design
+- [ ] Add file sizes
