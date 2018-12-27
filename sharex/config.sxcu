@@ -1,0 +1,12 @@
+{
+  "Name": "Thiqq.life",
+  "DestinationType": "ImageUploader, TextUploader, FileUploader",
+  "RequestType": "POST",
+  "RequestURL": "http://thiqq.life/sharex/upload.php",
+  "FileFormName": "sharex",
+  "Arguments": {
+    "secret": "token"
+  },
+  "ResponseType": "Text",
+  "URL": "http://thiqq.life/$json:url$"
+}
