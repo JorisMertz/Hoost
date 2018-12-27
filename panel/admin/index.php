@@ -29,7 +29,6 @@
         function convert_bytes($amount) {
             if (!$counting) $counting = 1024;
             if (!$amount) return false;
-            $type = 'bytes';
             if ($amount > 1024) {
                 if ($amount > 1048576) {
                     if ($amount > 1073741824) {
@@ -41,7 +40,7 @@
                     else return round($amount / 1048576, 1) . "mb";
                 }
                 else return round($amount / 1024, 1)  . "kb";
-            }
+            }   
             else return round($amount, 1) . "bytes";
         }
 

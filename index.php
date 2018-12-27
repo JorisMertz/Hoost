@@ -23,6 +23,12 @@ if (!empty($_GET)) {
 if (strpos($agent, 'Discordbot') !== false || strpos($agent, 'Twitterbot') !== false) {
 echo '<head><title>' . $str. '</title><meta content="summary_large_image" name="twitter:card"><meta content="' . $str . '" property="og:title"><meta content="#' . randomRGB() . '"name="theme-color"><meta content="' . $domain . $path . $str. '"name="twitter:image:src"></head>';
 }
+if (!file_exists('files/' . $_GET)) {
+    echo "Couldn't find " . $_GET;
+    echo "This error is caused because of the non-existing file.";
+    echo "Try uploading it again.";
+    return;
+}
 else {
     if (endsWith($str, "png")) {header("Content-type: image/png");}
     if (endsWith($str, "jpg") || endsWith($str, '"jpeg')) {header("Content-type: image/jpeg");}
