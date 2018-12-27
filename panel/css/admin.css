@@ -1,0 +1,16 @@
+.file {
+
+}
+
+.file img {
+    width: 25px;
+    float: left;
+    position: relative;
+}
+
+.file .filename {
+    float: left;
+    position: relative;
+    font-size: 20px;
+    margin: 0 0 0 20px;
+}

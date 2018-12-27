@@ -7,7 +7,7 @@
     }
     $file_types = file_get_contents("file_types.json");
     $file_types = json_decode($file_types, true);
-    //echo json_encode($file_types);
+
         function scan_dir($dir, $icon_lib) {
             $temp = [];
             $dir = scandir($dir);
@@ -18,16 +18,20 @@
                 if ($e == "." || $e == "..");
                 else {
                     $type = explode(".", $e);
-                    //  return $icon_lib[$type[1]];
                     $icon_lib[$type[1]]['filename'] = $e;
                     array_push($temp, $icon_lib[$type[1]]);
                 }
-                //echo $dir[$i];
             }
             return $temp;
         }
-        $dir_results = json_encode(scan_dir('../../files', $file_types));
+        $dir_results = scan_dir('../../files', $file_types);
 
-        // Handle directory results here:
+        // Include stylesheet
+        echo '<link rel="stylesheet" href="../css/admin.css">';
+        for ($i = 0; $i < sizeof($dir_results); $i++) {
+            $e = $dir_results[$i];
+            $file_type = explode('.', $e['filename'])[1];
 
+            echo "<div class='file'><img src='icons/" . $file_type . ".png'><a href='../../files/" . $e['filename'] . "'target='_blank' class='filename'>" . $e['filename'] . "</a></div></br></br>";
+        }
 ?>
