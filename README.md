@@ -17,7 +17,7 @@ Mac:
 Windows:
 
 > Go to <a href='https://getsharex.com/'>getsharex.com</a> and install the program</br>
-> Now download the <a href='https://raw.githubusercontent.com/JorisMertz/Hoost/master/sharex/config.sxcu'>config file</a> and open it.
+> Now download the <a href='https://raw.githubusercontent.com/JorisMertz/Hoost/master/sharex/config.sxcu'>config file</a> and open it. </br>
 > You're ready to use it.
 
 To-Do
