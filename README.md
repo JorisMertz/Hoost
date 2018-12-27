@@ -7,6 +7,6 @@ To-Do
 
 - [x] Add all file types
 - [ ] Support whatsapp embeds
-- [ ] Redesign
-- [ ] Finish admin panel design
+- [ ] Redesign Login & Admin panel
 - [ ] Add file sizes
+- [ ] Add file upload page
