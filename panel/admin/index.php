@@ -44,12 +44,18 @@
             else return round($amount, 1) . "bytes";
         }
 
+        function script ($src) {
+            echo "<script src='" . $src . "'></script>";
+        }
+
         // Include stylesheet
         echo '<link rel="stylesheet" href="../css/admin.css">';
+        script("script/jquery-3.3.1.min.js");
         for ($i = 0; $i < sizeof($dir_results); $i++) {
             $e = $dir_results[$i];
             $file_type = explode('.', $e['filename'])[1];
 
             echo "<div class='file'><img src='icons/" . $file_type . ".png'><a href='../../files/" . $e['filename'] . "'target='_blank' class='filename'>" . $e['filename'] . "</a><p class='filesize'>" . convert_bytes(filesize("../../files/" . $e['filename'])) . "</p></div>";
         }
+        script('script/preview.js')
 ?>
